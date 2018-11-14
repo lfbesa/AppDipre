@@ -39,7 +39,6 @@ export default async function getEvents() {
           return eventList
             .json()
             .then(eventListJson => {
-              console.log(eventListJson);
               return resolve(eventListJson);
             })
             .catch(e => {
