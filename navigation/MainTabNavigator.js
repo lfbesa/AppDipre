@@ -12,7 +12,7 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Eventos',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -30,7 +30,7 @@ const NewsStack = createStackNavigator({
 });
 
 NewsStack.navigationOptions = {
-  tabBarLabel: 'News',
+  tabBarLabel: 'Noticias',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -45,7 +45,7 @@ const ContactStack = createStackNavigator({
 });
 
 ContactStack.navigationOptions = {
-  tabBarLabel: 'Contact',
+  tabBarLabel: 'Contacto',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

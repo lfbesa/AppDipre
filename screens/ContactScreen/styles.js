@@ -18,4 +18,12 @@ export default StyleSheet.create({
     paddingHorizontal: 10,
     paddingTop: 20,
   },
+  buttonSend: {
+    backgroundColor: '#4CAF50', 
+    color: 'white',
+    padding: '15px 32px',
+    textAlign: 'center',
+    display: 'flex',
+    fontSize: 16,
+  },
 });

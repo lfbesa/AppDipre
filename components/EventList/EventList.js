@@ -7,9 +7,9 @@ import styles from "./styles";
 
 export default class EventList extends Component {
   static propTypes = {
-    evenList: PropTypes.arrayOf(
+    eventList: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.string,
+        id: PropTypes.number,
         epigraph: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string,
@@ -29,7 +29,7 @@ export default class EventList extends Component {
     index
   });
 
-  _keyExtractor = event => event.id;
+  _keyExtractor = event => event.id.toString();
 
 
   _getItemIndex = item =>

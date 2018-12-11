@@ -1,5 +1,5 @@
 import { Platform } from "react-native";
-NEWS='https://pacific-reaches-89162.herokuapp.com/news'
+NEWS='https://evening-refuge-97533.herokuapp.com/api/v1/articles'
 TOKEN = 'AppDipre'
 const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=ff7cb49265dc4191b9d0f7a7ffcb768a";
 
@@ -15,8 +15,8 @@ export default async function getNews() {
       TOKEN: TOKEN
     }
   };
-  let result = await fetch(url).then(response => response.json());
-  return result.articles;
+  //let result = await fetch(url).then(response => response.json());
+  //return result.articles;
 
   return Promise.race([
     new Promise((resolve, reject) => {

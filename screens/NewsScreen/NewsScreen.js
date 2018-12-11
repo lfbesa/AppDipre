@@ -10,7 +10,7 @@ import styles from "./styles";
 
 export default class NewsScreen extends React.Component {
   static navigationOptions = {
-    title: 'News',
+    title: 'Noticias',
   };
   constructor(props) {
     super(props);

@@ -1,4 +1,4 @@
-MAILAPI='https://pacific-reaches-89162.herokuapp.com/contacts';
+MAILAPI='https://evening-refuge-97533.herokuapp.com/api/v1/contacts';
 TOKEN = 'AppDipre';
 
 

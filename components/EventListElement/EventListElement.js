@@ -20,7 +20,7 @@ const MAX_LENGTH = 82;
 export default class EventListElement extends Component {
   static propTypes = {
     event: PropTypes.shape({
-        id: PropTypes.string,
+        id: PropTypes.number,
         epigraph: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string,
@@ -85,7 +85,7 @@ export default class EventListElement extends Component {
           {!!this.props.event.description && (
             <CardItem>
               <Body style={styles.largeTextBody}>
-                <View style={styles.card}>
+                
                   <ReadMore
                     numberOfLines={2}
                     renderTruncatedFooter={this._renderTruncatedFooter}
@@ -94,7 +94,6 @@ export default class EventListElement extends Component {
                       {this.props.event.description}
                     </Text>
                   </ReadMore>
-                </View>
               </Body>
             </CardItem>
           )}

@@ -61,8 +61,8 @@ export default class HomeScreen extends React.Component {
       loading: false,
       refreshing: false
     });
+    console.log("bb");
     this.data = eventsList;
-    console.log(this.state.events);
   }
 
   _errorEvents() {
@@ -83,7 +83,9 @@ export default class HomeScreen extends React.Component {
     console.log("refreshing");
     this.setState({ refreshing: true, error: false, loading: false }, () => {
       getEvents()
-        .then(eventList => this._saveEventsList(eventsList))
+        .then(eventList => {
+          this._saveEventsList(eventList);
+        })
         .catch(_ => this._errorEvents());
     });
     //console.log(this.state.refreshing);

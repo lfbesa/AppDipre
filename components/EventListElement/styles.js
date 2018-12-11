@@ -28,7 +28,7 @@ export default StyleSheet.create({
     marginVertical: 5,
   },
   largeTextBody: {
-    alignItems: 'left',
+    alignItems: 'center',
     marginHorizontal: 10,
   },
   largeButtonLeft: {

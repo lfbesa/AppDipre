@@ -41,13 +41,13 @@ export default class Article extends React.Component {
           }}
         >
           <Text style={{ marginBottom: 10 }}>
-            {description || 'Read More..'}
+            {description.substring(0,120).concat("...\nRead more...") || 'Read More'}
           </Text>
           <Divider style={{ backgroundColor: '#dfe6e9' }} />
           <View
             style={{ flexDirection: 'row', justifyContent: 'space-between' }}
           >
-            <Text style={noteStyle}>{source.name.toUpperCase()}</Text>
+            <Text style={noteStyle}>{source.toUpperCase()}</Text>
             <Text style={noteStyle}>{time}</Text>
           </View>
         </Card>

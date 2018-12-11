@@ -45,21 +45,28 @@ export default class ContactScreen extends React.Component {
 
   _sendQuery() {
     const formValues = this.formGenerator.getValues();
+    if (this._validateEmail(formValues.email) && !(formValues.subject === "")){
+      sendQuery(formValues);
+    } else {
+      alert('Debes entregar al menos tu correo y un asunto.')
+    }
     console.log('FORM VALUES', formValues);
-    sendQuery(formValues);
+    //sendQuery(formValues);
+  }
+  _validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
   }
 
   render() {
   	return (
   		<View style={styles.wrapper}>
-	        <View>
-	          <GenerateForm
-	            ref={(c) => {
-	              this.formGenerator = c;
-	            }}
-	            fields={fields}
-	          />
-	        </View>
+          <GenerateForm
+            ref={(c) => {
+              this.formGenerator = c;
+            }}
+            fields={fields}
+          />
 	        <View style={styles.submitButton}>
 	          <Button block onPress={() => this._sendQuery()} title="Enviar">
 	            <Text>Enviar</Text>

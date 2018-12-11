@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 import config from "../config";
 import data from "./demoNewsData";
-EVENTS='https://pacific-reaches-89162.herokuapp.com/events';
+EVENTS='https://evening-refuge-97533.herokuapp.com/api/v1/events';
 TOKEN = 'AppDipre';
 
 
@@ -32,6 +32,7 @@ export default async function getEvents() {
   //   }), 
   //   body: 'A=1&B=2'
   // });
+  console.log("aa")
   return Promise.race([
     new Promise((resolve, reject) => {
       fetch(EVENTS, header)
@@ -39,6 +40,7 @@ export default async function getEvents() {
           return eventList
             .json()
             .then(eventListJson => {
+              console.log("aa")
               return resolve(eventListJson);
             })
             .catch(e => {
