@@ -21,7 +21,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.appdipre.appdipre"
+
+    },
+    "android": {
+      "package": "com.appdipre.appdipre"
     }
   }
 }
