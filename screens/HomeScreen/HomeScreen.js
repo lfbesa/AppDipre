@@ -66,7 +66,7 @@ export default class HomeScreen extends React.Component {
   }
 
   _errorEvents() {
-    Alert.alert(
+    alert(
       "¡Atención!",
       "No hay eventos para mostrar"
     );
