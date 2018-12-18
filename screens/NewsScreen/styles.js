@@ -12,7 +12,7 @@ import {
 export default StyleSheet.create({
 	container: {
     flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+    //paddingTop: 15,
+    backgroundColor: BACKGROUND_COLOR,
   },
 });

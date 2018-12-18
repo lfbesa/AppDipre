@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native'
+import { Button, View, Text, Image } from 'react-native'
 import { Platform } from 'react-native';
 import GenerateForm from 'react-native-form-builder';
 
 import sendQuery from '../../api/sendQuery'
+import logoImage from "../../assets/images/logo_sinfondo.png"
 
 
 import styles from "./styles";
@@ -41,12 +42,17 @@ const fields = [
 export default class ContactScreen extends React.Component {
   static navigationOptions = {
     title: 'Contáctanos',
+    headerStyle: {
+      marginTop: -15,
+    },
   };
 
   _sendQuery() {
     const formValues = this.formGenerator.getValues();
     if (this._validateEmail(formValues.email) && !(formValues.subject === "")){
       sendQuery(formValues);
+      this.formGenerator.resetForm();
+      alert("Consulta enviada. Espera la respuesta en tu correo.")
     } else {
       alert('Debes entregar al menos tu correo y un asunto.')
     }
@@ -72,6 +78,13 @@ export default class ContactScreen extends React.Component {
 	            <Text>Enviar</Text>
 	          </Button>
 	        </View>
+          <View>
+            <Text style={styles.contact}>
+              ¿Tienes consultas?
+              También puedes enviarlas a dipre@ing.puc.cl.
+              Horario de atención de 9:15-16:00 hrs
+            </Text>
+          </View>
 	    </View>
     );
   }

@@ -164,7 +164,7 @@ export default class EventListElement extends Component {
     if (this.props.event.to_date){
       return (
         <Card>
-          <CardItem header button onPress={this.props.onPressItem}>
+          <CardItem header button onPress={this.props.onPressItem} style={{backgroundColor: '#FDD805'}}>
             <Body style={styles.headerBody}>
               <Text style={styles.headerBodyText}>{this.props.event.title}</Text> 
               <Divider style={{ backgroundColor: 'blue' }} />
@@ -176,7 +176,7 @@ export default class EventListElement extends Component {
     } else {
       return (
         <Card>
-          <CardItem header button onPress={this.props.onPressItem}>
+          <CardItem header button onPress={this.props.onPressItem} style={{backgroundColor: '#FDD805'}}>
             <Body style={styles.headerBody}>
               <Text style={styles.headerBodyText}>{this.props.event.title}</Text> 
               <Divider style={{ backgroundColor: 'blue' }} />

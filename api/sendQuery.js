@@ -17,5 +17,5 @@ export default async function sendQuery(values) {
 	  }),
 	}).catch((error) => {
       console.log(error);
-    });;
+    });
 }

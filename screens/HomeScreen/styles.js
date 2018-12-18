@@ -12,7 +12,7 @@ import {
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: BACKGROUND_COLOR,
   },
   developmentModeText: {
     marginBottom: 20,

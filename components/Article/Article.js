@@ -7,6 +7,14 @@ import styles from "./styles";
 
 export default class Article extends React.Component {
 
+  _openurl = url => {
+    if (!(url.includes("http"))){
+      Linking.openURL("http://".concat(url))
+    } else {
+      Linking.openURL(url);
+    }
+  };
+
   render() {
     let TouchablePlatformSpecific = Platform.OS === 'ios' ? 
         TouchableOpacity : 
@@ -31,7 +39,7 @@ export default class Article extends React.Component {
     return (
       <TouchablePlatformSpecific style={touchableStyle}
         useForeground
-        onPress={() => Linking.openURL(url)}
+        onPress={() => this._openurl(url)}
       >
         <Card
           featuredTitle={title}

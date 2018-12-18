@@ -16,7 +16,10 @@ import getEvents from '../../api/getEvents'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Eventos'
+    title: 'Eventos',
+    headerStyle: {
+      marginTop: -15,
+    },
   };
 
   constructor(props) {
