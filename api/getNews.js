@@ -1,5 +1,5 @@
 import { Platform } from "react-native";
-NEWS='https://evening-refuge-97533.herokuapp.com/api/v1/articles'
+NEWS='https://app-dipre-dashboard.herokuapp.com/api/v1/articles'
 TOKEN = 'AppDipre'
 const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=ff7cb49265dc4191b9d0f7a7ffcb768a";
 

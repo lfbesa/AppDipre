@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 import config from "../config";
 import data from "./demoNewsData";
-EVENTS='https://evening-refuge-97533.herokuapp.com/api/v1/events';
+EVENTS='https://app-dipre-dashboard.herokuapp.com/api/v1/events';
 TOKEN = 'AppDipre';
 
 
