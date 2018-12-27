@@ -32,7 +32,6 @@ export default async function getEvents() {
   //   }), 
   //   body: 'A=1&B=2'
   // });
-  console.log("aa")
   return Promise.race([
     new Promise((resolve, reject) => {
       fetch(EVENTS, header)
@@ -40,7 +39,6 @@ export default async function getEvents() {
           return eventList
             .json()
             .then(eventListJson => {
-              console.log("aa")
               return resolve(eventListJson);
             })
             .catch(e => {

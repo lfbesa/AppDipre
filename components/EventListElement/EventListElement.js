@@ -48,6 +48,14 @@ export default class EventListElement extends Component {
     </CardItem>
   );
 
+  _openurl = url => {
+    if (!(url.includes("http"))){
+      Linking.openURL("http://".concat(url))
+    } else {
+      Linking.openURL(url);
+    }
+  };
+
 
   _renderTruncatedFooter = (handlePress) => {
     return (
@@ -104,7 +112,7 @@ export default class EventListElement extends Component {
           </CardItem>
           {!!this.props.event.url && (
             <CardItem>
-              <Text style={{color: '#1273DE', marginTop: 5}} onPress={() => Linking.openURL(this.props.event.url)}>
+              <Text style={{color: '#1273DE', marginTop: 5}} onPress={() => this._openurl(this.props.event.url)}>
                 Ir al sitio
               </Text>
             </CardItem>
@@ -150,7 +158,7 @@ export default class EventListElement extends Component {
           </CardItem>
           {!!this.props.event.url && (
             <CardItem>
-              <Text style={{color: '#1273DE', marginTop: 5}} onPress={() => Linking.openURL(this.props.event.url)}>
+              <Text style={{color: '#1273DE', marginTop: 5}} onPress={() => this._openurl(this.props.event.url)}>
                 Ir al sitio
               </Text>
             </CardItem>

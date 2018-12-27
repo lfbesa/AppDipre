@@ -2,7 +2,7 @@
   "expo": {
     "name": "AppDipre",
     "description": "Una aplicación destinada al uso de los alumnos de ingeniería UC, para informarse de plazos y noticias de la Dirección de Pregrado",
-    "slug": "TabTry",
+    "slug": "AppDipre",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": ["ios", "android"],

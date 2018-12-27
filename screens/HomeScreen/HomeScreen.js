@@ -64,14 +64,12 @@ export default class HomeScreen extends React.Component {
       loading: false,
       refreshing: false
     });
-    console.log("bb");
     this.data = eventsList;
   }
 
   _errorEvents() {
     alert(
-      "¡Atención!",
-      "No hay eventos para mostrar"
+      "¡Atención! No hay eventos para mostrar"
     );
 
     this.setState({
