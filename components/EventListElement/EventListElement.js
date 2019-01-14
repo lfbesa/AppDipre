@@ -41,7 +41,6 @@ export default class EventListElement extends Component {
   };
 
 
-
   _cardItemHeader = children => (
     <CardItem header button onPress={this.props.onPressItem}>
       {children}

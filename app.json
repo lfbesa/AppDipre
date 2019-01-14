@@ -22,11 +22,13 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.appdipre.appdipre"
-
+      "bundleIdentifier": "com.appdipre.appdipre",
+      "buildNumber": "1"
     },
     "android": {
-      "package": "com.appdipre.appdipre"
+      "permissions": [],
+      "package": "com.appdipre.appdipre",
+      "versionCode": 2
     }
   }
 }
