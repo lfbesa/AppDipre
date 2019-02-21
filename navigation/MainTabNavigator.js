@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import NewsScreen from '../screens/NewsScreen';
 import ContactScreen from '../screens/ContactScreen';
+import LinkScreen from '../screens/LinkScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -55,8 +56,27 @@ ContactStack.navigationOptions = {
   ),
 };
 
+const LinkStack = createStackNavigator({
+  Links: LinkScreen,
+});
+
+LinkStack.navigationOptions = {
+  tabBarLabel: 'Links',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-link`
+          : 'md-link'
+      }
+    />
+  ),
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   NewsStack,
+  LinkStack,
   ContactStack,
 });

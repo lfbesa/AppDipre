@@ -5,7 +5,7 @@ import moment from 'moment';
 import styles from "./styles";
 
 
-export default class Article extends React.Component {
+export default class Link extends React.Component {
 
   _openurl = url => {
     if (!(url.includes("http"))){
@@ -26,15 +26,12 @@ export default class Article extends React.Component {
     const {
       title,
       description,
-      publishedAt,
-      source,
-      urlToImage,
+      //urlToImage,
       url
     } = this.props.article;
     const { noteStyle, featuredTitleStyle } = styles;
-    const time = moment(publishedAt || moment.now()).fromNow();
     const defaultImg =
-      'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAFVBMVEUZGRna18308+8AAADq6urp5+H+/v8sRrjgAAABG0lEQVR4nO3PgQ2CQBRAMUTu9h9ZiMYd3k+7QY/XdMdrnZOte3jua659PsPrPdf1Gx5TGfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2GfYZ9hn2/YdzfYf7mms/w3VOtu7hdB9snCJ9ivKkowAAAABJRU5ErkJggg==';
 
     return (
       <TouchablePlatformSpecific style={touchableStyle}
@@ -45,18 +42,17 @@ export default class Article extends React.Component {
           featuredTitle={title}
           featuredTitleStyle={featuredTitleStyle}
           image={{
-            uri: urlToImage || defaultImg
+            uri: defaultImg
           }}
         >
           <Text style={{ marginBottom: 10 }}>
-            {description.substring(0,120).concat("...\nRead more...") || 'Leer más'}
+            {description.concat("\nIr al sitio...") || 'Leer más'}
           </Text>
           <Divider style={{ backgroundColor: '#dfe6e9' }} />
           <View
             style={{ flexDirection: 'row', justifyContent: 'space-between' }}
           >
-            <Text style={noteStyle}>{source.toUpperCase()}</Text>
-            <Text style={noteStyle}>{time}</Text>
+            <Text style={noteStyle}>{url.toUpperCase()}</Text>
           </View>
         </Card>
       </TouchablePlatformSpecific>

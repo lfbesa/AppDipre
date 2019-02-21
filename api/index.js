@@ -5,5 +5,6 @@ import sendQuery from './sendQuery';
 export default {
   getEvents,
   getNews,
-  sendQuery
+  sendQuery,
+  getLinks
 };

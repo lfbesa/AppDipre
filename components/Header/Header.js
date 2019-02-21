@@ -18,8 +18,10 @@ import logoSource from "../../assets/images/logo_sinfondo.png"
 export default class CustomHeader extends Component {
   render() {
     return (
-      <Header  searchBar rounded style={{
-        paddingTop: 10
+      <Header  rounded style={{
+        paddingTop: 10,
+        backgroundColor: 'rgba(248,248,248)',
+
       }}>
          <Image
             style={{ height: 70 }}
